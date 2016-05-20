@@ -137,7 +137,7 @@ class Webbrowser extends BaseComponent {
                     decelerationRate="normal"
                     onNavigationStateChange={this.onNavigationStateChange}
                     onShouldStartLoadWithRequest={this.onShouldStartLoadWithRequest}
-                    startInLoadingState={true}
+                    startInLoadingState={false}
                     scalesPageToFit={this.state.scalesPageToFit}
                 />
                 {this.renderToolbar()}
