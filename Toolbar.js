@@ -3,7 +3,8 @@
 import React from 'react-native';
 var {
     View,
-    Image
+    Image,
+    TouchableOpacity
     } = React;
 
 import BaseComponent from './BaseComponent'
@@ -56,29 +57,40 @@ class Toolbar extends BaseComponent {
         return [styles.toolBarIcons, this.props.foregroundColor && {tintColor:this.props.foregroundColor}];
     }
 
+    onPressShare(){
+        console.log('this.props', this.props)
+        this.props.onPressShare(this.props.urlToShare)
+    }
+
     render() {
         return (
             <View style={styles.toolBar}>
 
-                <Button
-                    disabled={!this.state.backButtonEnabled}
-                    onPress={this.state.onBack}>
-                    <Image
-                        style={this.buttonStyle()}
-                        source={require('./assets/images/arrow-left.png')}
-                    />
-                </Button>
+                <View style={{flexDirection: 'row'}}>
 
-                {this.renderHomeButton()}
+                    <Button
+                        style={{marginRight: 50}}
+                        disabled={!this.state.backButtonEnabled}
+                        onPress={this.state.onBack}>
+                        <Image
+                            style={this.buttonStyle()}
+                            source={require('./assets/images/arrow-left.png')}
+                        />
+                    </Button>
 
-                <Button
-                    disabled={!this.state.forwardButtonEnabled}
-                    onPress={this.state.onForward}>
-                    <Image
-                        style={this.buttonStyle()}
-                        source={require('./assets/images/arrow-right.png')}
-                    />
-                </Button>
+                    <Button
+                        disabled={!this.state.forwardButtonEnabled}
+                        onPress={this.state.onForward}>
+                        <Image
+                            style={this.buttonStyle()}
+                            source={require('./assets/images/arrow-right.png')}
+                        />
+                    </Button>
+
+                </View>
+                <TouchableOpacity onPress={this.onPressShare.bind(this)}>
+                    {this.props.shareIcon}
+                </TouchableOpacity>
             </View>
         );
     }

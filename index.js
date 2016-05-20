@@ -112,6 +112,9 @@ class Webbrowser extends BaseComponent {
         return <Toolbar
             onBack={this.goBack}
             onHome={this.goHome}
+            onPressShare={this.props.onPressShare}
+            shareIcon={this.props.shareIcon}
+            urlToShare={this.state.currentUrl}
             onForward={this.goForward}
             backButtonEnabled={this.state.backButtonEnabled}
             forwardButtonEnabled={this.state.forwardButtonEnabled}
