@@ -2,9 +2,10 @@
 
 export default class Utils {
     static sanitizeUrl(url) {
-        if (!/^[a-zA-Z-_]+:/.test(url)) {
-            url = 'http://' + url;
-        }
-        return url.toLowerCase();
+        // if (!/^[a-zA-Z-_]+:/.test(url)) {
+        //     url = 'http://' + url;
+        // }
+        // return url.toLowerCase();
+        return url;
     }
 }
