@@ -109,12 +109,15 @@ class Webbrowser extends BaseComponent {
             return;
         };
 
+        let urlToShare = this.state.currentUrl;
+        if (this.state.url === this.state.currentUrl) urlToShare = this.props.brandedLink;
+
         return <Toolbar
             onBack={this.goBack}
             onHome={this.goHome}
             onPressShare={this.props.onPressShare}
             shareIcon={this.props.shareIcon}
-            urlToShare={this.state.currentUrl}
+            urlToShare={urlToShare}
             onForward={this.goForward}
             backButtonEnabled={this.state.backButtonEnabled}
             forwardButtonEnabled={this.state.forwardButtonEnabled}
