@@ -1,11 +1,10 @@
 'use strict';
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {
     View,
     TouchableOpacity,
     StyleSheet,
-    PropTypes,
     ActivityIndicatorIOS,
     ProgressBarAndroid,
     TouchableNativeFeedback,
