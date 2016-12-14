@@ -1,10 +1,9 @@
 'use strict';
 
-import React from 'react';
+import React, { PropTypes } from 'react';
 import {
     View,
-    WebView,
-    PropTypes
+    WebView
     } from 'react-native';
 
 import BaseComponent from './BaseComponent'

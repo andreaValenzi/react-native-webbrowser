@@ -1,10 +1,10 @@
 'use strict';
 
 import React from 'react';
-var {
+import {
     TextInput,
     View,
-    } = React;
+    } from 'react-native';
 
 import BaseComponent from './BaseComponent'
 import styles from './styles'
