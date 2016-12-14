@@ -9,8 +9,7 @@ import {
     ActivityIndicatorIOS,
     ProgressBarAndroid,
     TouchableNativeFeedback,
-    Platform,
-    Component
+    Platform
     } from 'react-native';
 
 const IS_ANDROID = Platform.OS === 'android';
